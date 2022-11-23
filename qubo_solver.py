@@ -1,6 +1,6 @@
 from functools import partial # for auto tuning chain strength
 from dwave.embedding.chain_strength import uniform_torque_compensation # for auto tuning chain strength
-from dwave.system import sample_qubo
+#from dwave.system import sample
 from dwave.system import EmbeddingComposite
 import pandas as pd
 
@@ -8,6 +8,7 @@ from dwave.system import DWaveSampler
 qubo = pd.read_csv('credit_data_qubo.csv', header=None).to_dict()
 # Use a D-Wave system as the sampler
 sampler = DWaveSampler() 
+print(qubo)
 
 print("QPU {} was selected.".format(sampler.solver.name))
 
