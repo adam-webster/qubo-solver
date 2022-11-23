@@ -3,9 +3,10 @@ from dwave.embedding.chain_strength import uniform_torque_compensation # for aut
 #from dwave.system import sample
 from dwave.system import EmbeddingComposite
 import pandas as pd
-
+import pickle
 from dwave.system import DWaveSampler
-qubo = pd.read_csv('credit_data_qubo.csv', header=None).to_dict()
+with open('credit_data_qubo.pkl', 'rb') as f:
+    qubo = pickle.load(f)
 # Use a D-Wave system as the sampler
 sampler = DWaveSampler() 
 print(qubo)
