@@ -1,6 +1,7 @@
 from functools import partial # for auto tuning chain strength
 from dwave.embedding.chain_strength import uniform_torque_compensation # for auto tuning chain strength
-
+from dwave.system import sample_qubo
+import pandas as pd
 
 device = BraketDWaveSampler(device_arn='arn:aws:braket:us-west-2::device/qpu/d-wave/Advantage_system6')
 #sampler = neal.SimulatedAnnealingSampler() # if we want to use simulator
