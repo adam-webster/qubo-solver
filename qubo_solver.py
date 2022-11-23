@@ -7,7 +7,6 @@ import pickle
 from dwave.system import DWaveSampler
 with open('credit_data_qubo.pkl', 'rb') as f:
     qubo = pickle.load(f)
-qubo = pd.read_csv('credit_data_qubo.csv', header=None, index=False).to_dict()
 # Use a D-Wave system as the sampler
 sampler = DWaveSampler() 
 print(qubo)
