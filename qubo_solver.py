@@ -26,6 +26,8 @@ sampleset = embedding_sampler.sample_qubo(qubo, chain_strength=chain_strength, n
 
 
 
+
+
 print(sampleset)
 
 with open('sampleset.pkl', 'wb') as f:
