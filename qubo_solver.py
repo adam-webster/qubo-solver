@@ -23,6 +23,9 @@ chain_strength = partial(uniform_torque_compensation, prefactor=2) # this auto-t
 sampleset = embedding_sampler.sample_qubo(qubo, chain_strength=chain_strength, num_reads=1000)
 
 
+
+
+
 print(sampleset)
 
 with open('sampleset.pkl', 'wb') as f:
